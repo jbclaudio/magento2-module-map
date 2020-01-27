@@ -44,6 +44,14 @@ class Address extends AbstractModel implements AddressInterface
     /**
      * {@inheritDoc}
      */
+    public function getFacilities()
+    {
+        return $this->getData(self::FACILITIES);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getRegion()
     {
         return $this->getData(self::REGION);
@@ -104,6 +112,14 @@ class Address extends AbstractModel implements AddressInterface
     public function setStreetView($streetView)
     {
         return $this->setData(self::STREET_VIEW, $streetView);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setFacilities($facilities)
+    {
+        return $this->setData(self::FACILITIES, $facilities);
     }
 
     /**

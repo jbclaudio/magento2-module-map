@@ -32,6 +32,7 @@ interface AddressInterface
     const REGION_ID     = 'region_id';
     const COUNTRY_ID    = 'country_id';
     const STREET_VIEW   = 'street_view';
+    const FACILITIES    = 'facilities';
 
     /**
      * Get region.
@@ -46,6 +47,13 @@ interface AddressInterface
      * @return string|null
      */
     public function getStreetView();
+
+     /**
+     * Get street view.
+     *
+     * @return string|null
+     */
+    public function getFacilities();
 
     /**
      * Get region ID.
@@ -108,6 +116,15 @@ interface AddressInterface
      * @return $this
      */
     public function setStreetView($streetView);
+
+     /**
+     * Set facilities.
+     *
+     * @param string $streetView.
+     *
+     * @return $this
+     */
+    public function setFacilities($facilities);
 
     /**
      * Set region ID.
