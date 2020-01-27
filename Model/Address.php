@@ -36,6 +36,14 @@ class Address extends AbstractModel implements AddressInterface
     /**
      * {@inheritDoc}
      */
+    public function getStreetView()
+    {
+        return $this->getData(self::STREET_VIEW);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getRegion()
     {
         return $this->getData(self::REGION);
@@ -88,6 +96,14 @@ class Address extends AbstractModel implements AddressInterface
     public function setCountryId($countryId)
     {
         return $this->setData(self::COUNTRY_ID, $countryId);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setStreetView($streetView)
+    {
+        return $this->setData(self::STREET_VIEW, $streetView);
     }
 
     /**

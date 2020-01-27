@@ -25,12 +25,13 @@ interface AddressInterface
     /**#@+
      * Constants for keys of data array. Identical to the name of the getter in snake case
      */
-    const STREET     = 'street';
-    const POSTCODE   = 'postcode';
-    const CITY       = 'city';
-    const REGION     = 'region';
-    const REGION_ID  = 'region_id';
-    const COUNTRY_ID = 'country_id';
+    const STREET        = 'street';
+    const POSTCODE      = 'postcode';
+    const CITY          = 'city';
+    const REGION        = 'region';
+    const REGION_ID     = 'region_id';
+    const COUNTRY_ID    = 'country_id';
+    const STREET_VIEW   = 'street_view';
 
     /**
      * Get region.
@@ -38,6 +39,13 @@ interface AddressInterface
      * @return \Magento\Customer\Api\Data\RegionInterface|null
      */
     public function getRegion();
+
+     /**
+     * Get street view.
+     *
+     * @return string|null
+     */
+    public function getStreetView();
 
     /**
      * Get region ID.
@@ -91,6 +99,15 @@ interface AddressInterface
      * @return $this
      */
     public function setRegion(\Magento\Customer\Api\Data\RegionInterface $region = null);
+
+     /**
+     * Set street view.
+     *
+     * @param string $streetView.
+     *
+     * @return $this
+     */
+    public function setStreetView($streetView);
 
     /**
      * Set region ID.
